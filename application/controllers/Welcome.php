@@ -73,7 +73,12 @@ class Welcome extends CI_Controller
     {
         $avail_user = User::all();
         $post = Post::find($id);
-        $this->_createView('update', ['post' => $post,'avail_user' =>$avail_user]);
+        $jenis = 0;
+        if($post->jenis == 'Berita') $jenis = 0;
+        else if($post->jenis == 'Tutorial') $jenis = 1;
+        else if($post->jenis == 'Blog') $jenis = 2;
+        
+        $this->_createView('update', ['post' => $post,'avail_user' =>$avail_user,  'jenis' => $jenis]);
     }
 
     public function update($id){

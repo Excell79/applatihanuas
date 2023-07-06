@@ -44,11 +44,23 @@
             </div>
             <div class="mb-3">
               <label for="Jenis">Jenis</label><br>
-              <input type="radio" id="berita" name="jenis" value="Berita"> 
+              @if($jenis == 0)
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Berita" required checked>
+              @else
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Berita" required>
+              @endif
                 <label for="berita">Berita</label>
-             <input type="radio" id="tutorial" name="jenis" value="Tutorial">
+                @if($jenis == 1)
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Tutorial" required checked>
+              @else
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Tutorial" required>
+              @endif
                <label for="tutorial">Tutorial</label>
-             <input type="radio" id="blog" name="jenis" value="Blog">
+               @if($jenis == 2)
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Blog" required checked>
+              @else
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Blog" required>
+              @endif
                <label for="blog">Blog</label>
             </div>
             <div class="mb-3">
