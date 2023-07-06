@@ -79,7 +79,7 @@ class Welcome extends CI_Controller
     public function update($id){
         $post = Post::find($id);
         $post->user_id = $this->input->post('username');
-        $post->artikel = $this->input->post('artikel');
+        $post->article = $this->input->post('artikel');
         $post->jenis = $this->input->post('jenis');
         $post->save();
 
